@@ -8,7 +8,7 @@ Item {
     PlasmaCore.DataSource {
         id: keystateSource
         engine: "keystate"
-        connectedSources: ["Caps Lock", "Num Lock"]
+        connectedSources: ["Caps Lock", "Num Lock", "Scroll Lock"]
     }
     Plasmoid.compactRepresentation: PlasmaComponents.Label {
         id: mainLabel
@@ -21,11 +21,21 @@ Item {
             } else {
                 text += "off"
             }
-            text += "<br />Num: "
-            if (keystateSource.data["Num Lock"]["Locked"]) {
-                text += "<strong>ON</strong>"
-            } else {
-                text += "off"
+            if (keystateSource.data["Num Lock"]) {
+                text += "<br />Num: "
+                if (keystateSource.data["Num Lock"]["Locked"]) {
+                    text += "<strong>ON</strong>"
+                } else {
+                    text += "off"
+                }
+            }
+            if (keystateSource.data["Scroll Lock"]) {
+                text += "<br />Scroll: "
+                if (keystateSource.data["Scroll Lock"]["Locked"]) {
+                    text += "<strong>ON</strong>"
+                } else {
+                    text += "off"
+                }
             }
             return text
         }
@@ -43,11 +53,21 @@ Item {
                 } else {
                     text += "off"
                 }
-                text += "<br />Num Lock is "
-                if (keystateSource.data["Num Lock"]["Locked"]) {
-                    text += "<strong>ON</strong>"
-                } else {
-                    text += "off"
+                if (keystateSource.data["Num Lock"]) {
+                    text += "<br />Num Lock is "
+                    if (keystateSource.data["Num Lock"]["Locked"]) {
+                        text += "<strong>ON</strong>"
+                    } else {
+                        text += "off"
+                    }
+                }
+                if (keystateSource.data["Scroll Lock"]) {
+                    text += "<br />Scroll Lock is "
+                    if (keystateSource.data["Scroll Lock"]["Locked"]) {
+                        text += "<strong>ON</strong>"
+                    } else {
+                        text += "off"
+                    }
                 }
                 return text
             }
