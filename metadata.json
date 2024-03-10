@@ -1,0 +1,20 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "yuenhoe86@gmail.com",
+                "Name": "Lim Yuen Hoe"
+            }
+        ],
+        "Description": "Shows Caps Lock/Num Lock State",
+        "Id": "com.yuenhoe.lockstate",
+        "License": "GPL",
+        "Name": "Key Lock State",
+        "ServiceTypes": [
+            "Plasma/Applet"
+        ],
+        "Version": "1.1",
+        "Website": "http://techbase.kde.org"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0"
+}

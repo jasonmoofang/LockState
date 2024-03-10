@@ -1,4 +1,4 @@
-**Plasma 5 applet that shows the state of Caps/Num Locks**
+**Plasma 6 applet that shows the state of Caps/Num Locks**
 
 To install:
 
